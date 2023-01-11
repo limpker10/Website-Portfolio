@@ -1,6 +1,20 @@
-<div class="wrapper wrapper-works">
-  <div class="card">
-    <h1>The color scheme is : </h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente quas, delectus quae error dicta minima, quibusdam dolores deleniti expedita atque tempore at incidunt non itaque et dolor quos possimus vitae?</p>
+<div class="wrapper wrapper-works ">
+  <div>
+    <h2>Tecnologias</h2>
+    <ul class="list-tecnologias">
+      <li class="list-item">
+        <img class="item-img" src="../../assets/img/angular-img.png" alt="">
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div class="d-flex flex-wrap">
+    <div class="card col-12 col-sm-12 col-lg-4" *ngFor="let item of [1,1,1]">
+      <div class="card-block">
+        <h1>The color scheme is : </h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente quas, delectus quae error dicta minima,
+          quibusdam dolores deleniti expedita atque tempore at incidunt non itaque et dolor quos possimus vitae?</p>
+      </div>
+    </div>
   </div>
 </div>

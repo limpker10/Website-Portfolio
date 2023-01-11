@@ -8,7 +8,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class HeaderComponent implements OnInit{
 
-  theme: Theme = 'light-theme';
+  theme: Theme = 'dark-theme';
 
   constructor(
     @Inject(DOCUMENT) private document: Document,

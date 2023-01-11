@@ -1,5 +1,37 @@
 .wrapper-works {
   margin-top: 2rem;
   background-color: var(--box-color);
-  box-shadow: var(--box-shadow);
+  height: calc(100vh - 8rem);
+  //box-shadow: var(--box-shadow);
+}
+
+.card {
+
+  .card-block {
+    border-radius: 2rem;
+    //height: 15rem;
+    //display: block;
+    padding: 2rem;
+    background-color: var(--link-color);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+  }
+}
+
+.list-tecnologias {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  //border: solid red;
+
+  .list-item {
+    padding: 0 1rem;
+    width: 100%;
+
+    .item-img {
+      max-width: 5%;
+    }
+  }
+  
 }
