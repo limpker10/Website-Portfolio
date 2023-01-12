@@ -1,0 +1,12 @@
+<div class="d-flex flex-wrap ">
+  <div class="card col-12 col-sm-12 col-lg-4 
+    animate__animated animate__fadeInUp animation-{{i*2}}" *ngFor="let item of proyects; let i = index">
+    
+      <div class="card-container">
+        <div class="card-title">{{item.title}}</div>
+        <div class="card-description">{{item.description}}</div>
+        <div class="card-resources">{{item.resources}}</div>
+      </div>
+  
+  </div>
+</div>

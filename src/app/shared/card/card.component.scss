@@ -1,0 +1,14 @@
+.card {
+
+  width: 100%;
+  height: auto;
+  backdrop-filter: blur(1rem);
+
+  .card-container {
+    //background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--card-color);
+    //box-shadow: var(--background-color);
+  }
+}
