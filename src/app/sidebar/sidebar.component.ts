@@ -16,7 +16,7 @@ export class SidebarComponent implements AfterViewInit {
   }
 
   initEfect() {
-    const titleElement = this.asTitle?.nativeElement;
+    
   }
 
 }

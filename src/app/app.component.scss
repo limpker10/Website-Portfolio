@@ -1,87 +1,86 @@
-// n is number of stars required
-@function multiple-box-shadow ($n) {
-  $value: '#{random(2000)}px #{random(2000)}px #FFF';
-  @for $i from 2 through $n{
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
-  }
-  @return unquote($value)
-}
 
-$shadows-small:  multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-big:    multiple-box-shadow(100);
+// @keyframes move_wave {
+//   0% {
+//     transform: translateX(0) translateZ(0) scaleY(1)
+//   }
 
+//   50% {
+//     transform: translateX(-25%) translateZ(0) scaleY(0.55)
+//   }
 
-.stars {
+//   100% {
+//     transform: translateX(-50%) translateZ(0) scaleY(1)
+//   }
+// }
 
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  box-shadow: $shadows-small;
-  color: red;
-  animation			: animStar 50s linear infinite;
-    
-  &:after{
-    content: " ";
-    position: absolute;
-    top: 2000px;
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow: $shadows-small;
-  }
-} 
-.stars2 {
-  width: 2px;
-  height: 2px;
-  background: transparent;
-  box-shadow: $shadows-medium;
-  animation			: animStar 100s linear infinite;
-    
-  &:after {
+// .waveWrapper {
+//   overflow: hidden;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   top: 0;
+//   margin: auto;
+//   opacity: .8;
+//   pointer-events: none;
+// }
 
-    content: " ";
-    position: absolute;
-    top: 2000px;
-    width: 2px;
-    height: 2px;    
-    background: transparent;
-    box-shadow: $shadows-medium;
+// .waveWrapperInner {
+//   position: absolute;
+//   width: 100%;
+//   overflow: hidden;
+//   height: 100%;
+//   bottom: -1px;
+//   background-image: var(--background-image);
+// }
 
-  }
-    
-}
-  
-    
-.stars3 {
-  width: 3px;
-  height: 3px;
-  background: transparent;
-  box-shadow: $shadows-big;
-  animation			: animStar 150s linear infinite;
-    
-  &:after {
-    content: " ";
-    position: absolute;
-    top: 2000px;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: $shadows-big;
-  }
-}
+// .bgTop {
+//   z-index: 2;
+//   opacity: 0.5;
+// }
 
-    
-@keyframes animStar {
-  from	{
-    transform: translateY(0px)
-  }
+// .bgMiddle {
+//   z-index: 1;
+//   opacity: 0.75;
+// }
 
-to		{
-  transform: translateY(-2000px)
-}
+// .bgBottom {
+//   z-index: 0;
+// }
 
-}
- 
-    
+// .wave {
+//   position: absolute;
+//   left: 0;
+//   width: 200%;
+//   height: 100%;
+//   background-repeat: repeat no-repeat;
+//   background-position: 0 bottom;
+//   transform-origin: center bottom;
+// }
 
+// .waveTop {
+//   background-size: 50% 100px;
+// }
+
+// .waveAnimation .waveTop {
+//   animation: move-wave 3s;
+//   -webkit-animation: move-wave 3s;
+//   -webkit-animation-delay: 1s;
+//   animation-delay: 1s;
+// }
+
+// .waveMiddle {
+//   background-size: 50% 120px;
+// }
+
+// .waveAnimation .waveMiddle {
+//   animation: move_wave 10s linear infinite;
+// }
+
+// .waveBottom {
+//   background-size: 50% 100px;
+// }
+
+// .waveAnimation .waveBottom {
+//   animation: move_wave 15s linear infinite;
+// }

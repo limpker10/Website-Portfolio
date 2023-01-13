@@ -6,17 +6,16 @@
   </div>
   <div class="section-2">
   <ul class="list-menu">
-    <li class="item-menu" *ngFor="let item of [1,1,1]; let i = index">
-      <span class="item-number">
-        {{i}}
-      </span>
-      <span class="link">
-        Link
-      </span>
+    <li class="item-menu">
+      <button class="toggle" (click)="switchTheme()">
+        {{ theme === "light-theme" ? "Switch to dark" : "Switch to light" }}
+      </button>
+    </li>
+    <li class="item-menu">
+      <button class="toggle" (click)="dowloadFile()">
+        Dowload CV
+      </button>
     </li>
   </ul>
-  <button class="toggle" (click)="switchTheme()">
-    {{ theme === "light-theme" ? "Switch to dark" : "Switch to light" }}
-  </button>
   </div>
 </div>

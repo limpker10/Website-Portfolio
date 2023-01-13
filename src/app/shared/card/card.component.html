@@ -1,12 +1,32 @@
 <div class="d-flex flex-wrap ">
-  <div class="card col-12 col-sm-12 col-lg-4 
+  <div class="card  col-12 col-sm-12 col-lg-4 
     animate__animated animate__fadeInUp animation-{{i*2}}" *ngFor="let item of proyects; let i = index">
-    
-      <div class="card-container">
-        <div class="card-title">{{item.title}}</div>
-        <div class="card-description">{{item.description}}</div>
-        <div class="card-resources">{{item.resources}}</div>
+
+    <div class="card-container neon-border">
+      <div class="card-header">
+        <div class="card-title">
+          <h1>{{item.title}}</h1>
+        </div>
+        <ul>
+          <li class="item-menu"><i class="uil uil-github i-contact"></i></li>
+        </ul>
       </div>
-  
+
+      <p class="card-description">
+        {{item.description}}
+      </p>
+      <hr>
+      <div class="card-resources" >
+        <ul class="list-menu">
+          <li class="item-menu" *ngFor="let resource of item.resources">
+            <span>
+            {{resource}}
+            </span>
+            <i class="uil uil-coffee icon-resource"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </div>

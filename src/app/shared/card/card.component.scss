@@ -1,14 +1,59 @@
 .card {
-
   width: 100%;
   height: auto;
-  backdrop-filter: blur(1rem);
+  //border: transparent;
+  //backdrop-filter: blur(1rem);
+
+  .card-header {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+  }
+  .card-title {
+    margin-bottom: 1.2rem;
+  }
 
   .card-container {
     //background-color: rgba(255, 255, 255, 0.1);
     padding: 1rem;
+
     border-radius: 1rem;
     background-color: var(--card-color);
     //box-shadow: var(--background-color);
+  }
+
+  .card-description {
+
+    color: var(--text-color);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.8rem;
+
+  }
+
+  .card-resources {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.list-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1rem
+}
+
+.item-menu {
+  background-color: var(--icons-color);
+  border-radius: 2rem;
+  padding: .5rem;
+
+  .icon-resource{
+    font-size: 1.8rem;
+    vertical-align: middle;
   }
 }

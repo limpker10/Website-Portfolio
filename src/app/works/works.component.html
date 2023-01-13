@@ -1,28 +1,11 @@
 <div class="wrapper wrapper-works">
-
-  <h2>Tecnologias</h2>
-  <ul class="list-tecnologias ">
-    <li class="list-item ">
-      <img class="item-img" src="../../assets/icons/angular.svg" alt="angularSVG">
-    </li>
-    <li class="list-item">
-      <img class="item-img" src="../../assets/icons/css.svg" alt="cssSVG">
-    </li>
-    <li class="list-item">
-      <img class="item-img" src="../../assets/icons/html5.svg" alt="html5SVG">
-    </li>
-    <li class="list-item">
-      <img class="item-img" src="../../assets/icons/django.svg" alt="djangoSVG">
-    </li>
-    <li class="list-item">
-      <img class="item-img" src="../../assets/icons/django.svg" alt="djangoSVG">
-    </li>
-    <li class="list-item">
-      <img class="item-img" src="../../assets/icons/django.svg" alt="djangoSVG">
+  <ul class="list-tecnologias">
+    <li class="list-item " *ngFor="let icon of icons; let i = index">
+      <img class="item-img neon-border animate__animated animate__fadeInUp animation-{{i*2}}" src={{icon.path}} alt={{icon.name}}>
     </li>
   </ul>
 
-  <hr>
+  <hr class="neon-border">
 
   <app-card [data]="proyects"></app-card>
 
