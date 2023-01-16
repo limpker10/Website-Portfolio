@@ -4,7 +4,7 @@
   --box-color: #F5EBE0;
   --button-color: #fff;
   --link-color: #FFD9C0;
-  --link-color-hover: #FEFCF3;
+  --link-color-hover: #ffd9c0f4;
   --icons-color: #FFD9C0;
   --card-color: #ffd9c0f4;
   --box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
@@ -12,20 +12,19 @@
 }
 
 .dark-theme {
-  --background-color: #020c1b;
+  --background-color: #161b33;
   --text-color: #f5f5f5;
-  --box-color: #0a192f;
+  --box-color: #1b203a;
   --button-color: #1a1a1a;
-  --link-color: #343a40;
+  --link-color: #212541;
   --link-color-hover: #829ac9;
-  --icons-color: #06132686;
-  --card-color: #071c3cbb;
+  --icons-color: #212541;
+  --card-color: #212541;
   --box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
-  --box2-shadow: -16px -16px 32px #192047,
-  16px 16px 32px #3b4eab;
+  --box2-shadow:   5px 5px 31px #161d3f,
+  -5px -5px 31px #3e51b3;
   //--box2-shadow: 0px 0px 49px 15px rgba(193, 208, 226, 0.444);
 }
-
 
 html,
 body {
@@ -35,8 +34,6 @@ body {
   font-family: 'Cabin', sans-serif;
   background-color: var(--background-color);
   transition: all .3s ease-in-out;
-  height: 100%;
-  //overflow: hidden;
 }
 
 h1,
@@ -50,80 +47,4 @@ p {
 
 hr {
   margin: 1rem 0 1rem;
-}
-
-@for $i from 1 through 100 {
-  .animation-#{$i} {
-    animation-delay: #{calc($i /10)} s;
-  }
-}
-
-.wrapper {
-  border-radius: 2rem;
-  color: var(--text-color);
-  transition: all .1s ease;
-  padding: 2rem;
-  //opacity: .8;
-}
-
-.neon-border {
-  box-shadow:var(--box2-shadow);
-}
-.border-neon {
-  box-shadow: 0 0 .2rem #fff,
-            0 0 .2rem #fff,
-            0 0 2rem var(--box-color),
-            0 0 0.8rem var(--box-color),
-            0 0 1.8rem var(--box-color),
-            inset 0 0 1.3rem var(--box-color);
-}
-
-
-// .image {
-//   background-image: url("../src/assets/img/image-background.jpg");
-//   background-size: cover;
-//   width: 100%;
-//   height: 90vh;
-//   opacity: .2;
-//   position: absolute;
-// }
-
-
-// .clouds {
-//   z-index: 1;
-//   background: transparent url('https://i.imgur.com/mHbScrQ.png') repeat top center;
-//   animation: move-clouds-back 200s linear infinite;
-// }
-
-
-// .twinkling{
-// 	z-index: 1;
-// 	background:transparent url('https://i.imgur.com/XYMF4ca.png') repeat top center;
-// 	animation: move-twink-back 200s linear infinite;
-// }
-
-
-// .stars {
-// 	z-index: 0;
-// 	background: #000 url('https://i.imgur.com/YKY28eT.png') repeat top center;
-// }
-
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 10000px 0;
-  }
 }

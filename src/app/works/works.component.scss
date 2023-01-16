@@ -1,28 +1,37 @@
 .wrapper-works {
-  margin-top: 2rem;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  padding: 2rem;
+  height: 90vh;
+  scroll-behavior: smooth;
   background-color: var(--box-color);
-  //box-shadow: var(--box-shadow);
+
+  &::-webkit-scrollbar {
+    background-color: var(--background-color);
+  }
+  
 }
 
-.list-tecnologias {
-  display: flex;      /* Required for table-cell to work on li's */
-  flex-wrap: wrap; 
-  align-items: center; 
-  justify-content: space-evenly;
+.list-menu {
+
   list-style: none;
   margin: 0;
   padding: 0;
-  //justify-content: space-between;
-  //border: solid red;
+  justify-content: space-between;
+}
 
-  .list-item {
-    padding: .23rem;
-    .item-img{
-      width: 6rem;
-      background-color: var(--icons-color);
-      border-radius: 1rem;
-      padding: 0.7rem;
+.item-menu {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 20%;
+  background-color: var(--link-color);
+  transition: all ease 20ms;
+
+  .item-image {
+    max-width: 40%;
+
+    img {
+      width: 4em;
     }
   }
-
 }

@@ -9,8 +9,8 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 export class SidebarComponent implements AfterViewInit {
   @ViewChild('asTitle') asTitle: ElementRef | undefined
   title = 'angularTests';
-  list = ['Angular Typewriter Effect', 'Hello World...']
-  
+  list = ['Desarrollador de Software', 'Desarrollador Web']
+  public sidebarShow: boolean = false;
   ngAfterViewInit(): void {
 
   }

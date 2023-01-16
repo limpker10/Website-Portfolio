@@ -1,12 +1,23 @@
-<div class="wrapper wrapper-works">
-  <ul class="list-tecnologias">
-    <li class="list-item " *ngFor="let icon of icons; let i = index">
-      <img class="item-img neon-border animate__animated animate__fadeInUp animation-{{i*2}}" src={{icon.path}} alt={{icon.name}}>
-    </li>
-  </ul>
+<section class="container-fluid wrapper-works">
+  <section class="first" >
+    <ul class="d-flex flex-wrap list-menu">
+      <li class="item-menu" *ngFor="let icon of icons; let i = index">
+        <div class="item-image">
+          <img class=" neon-border animate__animated animate__fadeInUp animation-{{i*2}}" src={{icon.path}}
+            alt={{icon.name}}>
+        </div>
+      </li>
+    </ul>
+  </section>
 
   <hr class="neon-border">
 
-  <app-card [data]="proyects"></app-card>
+  <section class="second" id="slide-1">
+    <h1>My Proyects</h1>
+    <app-card [data]="proyects"></app-card>
+  </section>
 
-</div>
+  <section class="thirt">
+    <h1>History Time</h1>
+  </section>
+</section>

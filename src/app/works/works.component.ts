@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.scss']
 })
-export class WorksComponent {
+export class WorksComponent  {
+  
   proyects : proyect[] = [{
     title : "proyecto1",
     description : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero eaque ab at qui ut repellat! Suscipit, facere ea porro ab praesentium exercitationem magni laboriosam inventore, expedita nulla mollitia recusandae ad. ",
@@ -33,6 +34,7 @@ export class WorksComponent {
     {name:"springBoot",path:"../../assets/icons/spring-boot.svg"}
   ]
 }
+
 export type proyect = {
   title : string,
   description : string,
