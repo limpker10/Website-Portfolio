@@ -2,14 +2,21 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   padding: 2rem;
-  height: 90vh;
+  height: 98vh;
   scroll-behavior: smooth;
   background-color: var(--box-color);
+  display: flex;
+  flex-direction: column;
 
   &::-webkit-scrollbar {
-    background-color: var(--background-color);
+    background-color: var(--item-color);
+    width: 0;
   }
-  
+
+}
+
+.skills {
+  margin: 2rem 0;
 }
 
 .list-menu {
@@ -34,4 +41,67 @@
       width: 4em;
     }
   }
+}
+
+
+
+.back-image {
+  background-image: url("../../assets/img/image-background-desktop.jpg");
+  //filter: blur(3px);
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    background-image: none;
+  }
+
+  .wrapper-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .container-text {
+      width: 80%;
+      padding: 2rem;
+
+      .bg-text {
+        backdrop-filter: blur(2px);
+        background-color: rgba(62, 73, 95, 0.35);
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+    }
+
+  }
+
+}
+
+
+
+
+.pre-title {
+  padding: 1rem 0;
+}
+
+.title {
+  color: var(--text-color);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.sub-title {
+  color: var(--text-color);
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: .5rem 0;
+}
+
+.description {
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8rem;
 }

@@ -1,7 +1,14 @@
 .wrapper-sidebar {
   background-color: var(--box-color);
   box-shadow: var(--box-shadow);
-  
+  padding: 1rem;
+  border-right: solid rgba(22,27,51,1) ;
+  height: 98vh;
+
+  @media only screen and (max-width: 768px) {
+    background-color: red;
+  }
+
 }
 .sidebar-header{
   display: flex;
@@ -16,5 +23,29 @@
     transition: .3s;
     clip-path: circle(50% at 50% 50%);
 
+  }
+}
+
+.list-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.item-menu {
+  cursor: pointer;
+  padding: 0 .2rem;
+  border-radius: 1rem;
+  background-color: var(--link-color);
+  transition: all ease 20ms;
+  &:hover {
+    opacity: .8;
+    background-color: var(--link-color-hover);
+  }
+
+  .i-contact{
+    font-size: 3.2rem
   }
 }
