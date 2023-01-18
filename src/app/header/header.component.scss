@@ -1,31 +1,42 @@
-
 .wrapper-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--text-color);
   background-color: var(--box-color);
+  height: 10vh;
+  padding: 2rem;
+}
+.sidenav-collapsed {
+  display: none;
+  
+  @media only screen and (max-width: 768px) {
+    background-color: rgb(168, 166, 176);
+  }
 }
 
 .section-2 {
-  .list-menu{
+  .list-menu {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-    .item-menu {
-      cursor: pointer;
-      padding: 0 1rem;
-      transition: all ease 20ms;
-      &:hover {
-        opacity: .8;
-      }
+
+  .item-menu {
+    cursor: pointer;
+    padding: 0 1rem;
+    transition: all ease 20ms;
+
+    &:hover {
+      opacity: .8;
     }
-    .item-number {
-      padding: 0 0.5rem;
-    }
-  
+  }
+
+  .item-number {
+    padding: 0 0.5rem;
+  }
+
 }
 
 .toggle {
@@ -37,4 +48,13 @@
   background-color: var(--text-color);
   color: var(--button-color);
   transition: all .1s ease;
- }
+}
+
+.toggle-menu {
+  
+  align-items: center;
+  filter: invert(1);
+  min-width: 2rem;
+  top: 5%;
+  
+}

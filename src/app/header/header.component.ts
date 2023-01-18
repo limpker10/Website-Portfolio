@@ -1,6 +1,11 @@
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { DownloadFileService } from '../core/services/download-file.service';
+
+interface SidenavToggle {
+  screenWith: number,
+  collapsed: boolean
+}
 
 @Component({
   selector: 'app-header',
@@ -8,9 +13,10 @@ import { DownloadFileService } from '../core/services/download-file.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
-
+  collapsed = false
   theme: Theme = 'dark-theme';
- 
+  @Output() onToggleSideNav: EventEmitter<SidenavToggle> = new EventEmitter()
+  
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
@@ -20,7 +26,12 @@ export class HeaderComponent implements OnInit{
     this.initializeTheme();
   }
 
-  
+  toggleCollapse() {
+    console.log("hikas")
+    this.collapsed = !this.collapsed
+    this.onToggleSideNav.emit({collapsed:this.collapsed,screenWith:0})
+  }
+
   switchTheme() {
     this.document.body.classList.replace(
       this.theme,

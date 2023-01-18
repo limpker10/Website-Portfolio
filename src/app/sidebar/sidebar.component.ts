@@ -1,6 +1,9 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
-
+interface SidenavToggle {
+  screenWith: number,
+  collapsed: boolean
+}
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -8,6 +11,9 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class SidebarComponent implements AfterViewInit {
   @ViewChild('asTitle') asTitle: ElementRef | undefined
+  @Output() onToggleSideNav: EventEmitter<SidenavToggle> = new EventEmitter()
+
+  collapsed = false;
   title = 'angularTests';
   list = ['Desarrollador de Software', 'Desarrollador Web']
   public sidebarShow: boolean = false;
@@ -15,8 +21,8 @@ export class SidebarComponent implements AfterViewInit {
 
   }
 
-  initEfect() {
-    
+  toggleCollapse() {
+    this.collapsed = !this.collapsed
   }
 
 }

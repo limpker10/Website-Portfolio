@@ -1,8 +1,8 @@
 .wrapper-works {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  padding: 2rem;
-  height: 98vh;
+  padding: 0 2rem;
+  height: 88vh;
   scroll-behavior: smooth;
   background-color: var(--box-color);
   display: flex;

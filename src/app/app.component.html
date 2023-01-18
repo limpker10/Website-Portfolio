@@ -1,7 +1,8 @@
 <div class="d-flex flex-wrap container-xl">
   
-    <app-sidebar class="col col-md-4 col-lg-3 wrapper-content"></app-sidebar>
-    <div class="col col-md-12 col-lg-9 wrapper-content">
+    <app-sidebar class="col col-md-4 col-lg-3 wrapper-content" [ngClass]="isSideNavCollapsed ? 'sidenav-collapsed' : '' "></app-sidebar>
+    <div class="col col-md-8 col-lg-9 wrapper-content">
+      <app-header (onToggleSideNav)="onToggleSidenav($event)"></app-header>
       <app-works></app-works>
     </div>
 

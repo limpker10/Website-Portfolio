@@ -4,12 +4,13 @@
   padding: 1rem;
   border-right: solid rgba(22,27,51,1) ;
   height: 98vh;
-
+  
   @media only screen and (max-width: 768px) {
-    background-color: red;
+    display: none;
   }
 
 }
+
 .sidebar-header{
   display: flex;
   flex-direction: column;
