@@ -1,7 +1,7 @@
 .wrapper-works {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  padding: 0 2rem;
+  padding: 0 2%;
   height: 88vh;
   scroll-behavior: smooth;
   background-color: var(--box-color);
@@ -46,15 +46,14 @@
 
 
 .back-image {
-  background-image: url("../../assets/img/image-background-desktop.jpg");
-  //filter: blur(3px);
+  //background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg"); 
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(../../assets/img/wave.svg);
   border-radius: 1rem;
+  background-size: 1200px;
   width: 100%;
-
+  animation: wave 4s linear infinite;
+  fill: blue;
   @media only screen and (max-width: 768px) {
     background-image: none;
   }
@@ -65,9 +64,13 @@
     width: 100%;
     align-items: center;
 
+    @media only screen and (max-width: 768px) {
+      background-image: none;
+    }
+
     .container-text {
-      width: 80%;
-      padding: 2rem;
+      min-width: 80%;
+      padding: inherit;
 
       .bg-text {
         backdrop-filter: blur(2px);
@@ -81,8 +84,14 @@
 
 }
 
-
-
+@keyframes wave {
+  0% {
+    background-position-x: 1200px;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
 
 .pre-title {
   padding: 1rem 0;

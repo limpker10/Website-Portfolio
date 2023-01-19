@@ -2,6 +2,7 @@
   height: 100vh;
   padding: .6rem 0 .6rem; 
   margin: auto ;
+
 }
 .container-xl {
   max-width: 1420px;
@@ -9,5 +10,27 @@
   margin-left: auto;
 }
 .sidenav-collapsed{
-  display: none;
+  @media only screen and (max-width: 768px) {
+    transform: translateX(0%);
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    transition: transform 1s ease;
+    opacity: 1;
+    
+  }
 }
+.content {
+  //transform: translateX(0);
+  @media only screen and (max-width: 768px) {
+    
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    visibility: hidden;
+    transition: visibility 2s,transform 1s;
+    //transition: transform 1s ease;
+  }
+}
+

@@ -13,7 +13,7 @@ interface SidenavToggle {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
-  collapsed = false
+  collapsed = true
   theme: Theme = 'dark-theme';
   @Output() onToggleSideNav: EventEmitter<SidenavToggle> = new EventEmitter()
   
@@ -27,8 +27,7 @@ export class HeaderComponent implements OnInit{
   }
 
   toggleCollapse() {
-    console.log("hikas")
-    this.collapsed = !this.collapsed
+    //console.log("hikas")
     this.onToggleSideNav.emit({collapsed:this.collapsed,screenWith:0})
   }
 

@@ -2,23 +2,19 @@
   background-color: var(--box-color);
   box-shadow: var(--box-shadow);
   padding: 1rem;
-  border-right: solid rgba(22,27,51,1) ;
+  border-right: solid rgba(22, 27, 51, 1);
   height: 98vh;
-  
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
 
 }
 
-.sidebar-header{
+.sidebar-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+
   .header-img {
-    
     width: 12rem;
+    //padding: 2rem;
     filter: drop-shadow(2px 2px 5px) saturate(1.3);
     object-fit: cover;
     transition: .3s;
@@ -41,12 +37,34 @@
   border-radius: 1rem;
   background-color: var(--link-color);
   transition: all ease 20ms;
+
   &:hover {
     opacity: .8;
     background-color: var(--link-color-hover);
   }
 
-  .i-contact{
+  .i-contact {
     font-size: 3.2rem
+  }
+}
+
+.collapse {
+  display: none;
+  width: 12%;
+  position: relative;
+  left: 89%;
+  padding: 0;
+  margin: 0;
+
+  .icon-collapse {
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 2rem;
+    background-color: var(--text-color);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    display: block;
   }
 }

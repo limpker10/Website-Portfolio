@@ -21,4 +21,7 @@ export class AppComponent implements OnChanges{
     console.log(data.collapsed)  
     this.isSideNavCollapsed = data.collapsed
   }
+  onToggleSideBar(data : SidenavToggle){
+    this.isSideNavCollapsed = data.collapsed
+  }
 }
