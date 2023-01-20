@@ -24,11 +24,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .item-menu {
-  cursor: pointer;
   padding: 1rem;
   border-radius: 20%;
   background-color: var(--link-color);
@@ -50,10 +49,11 @@
   position: relative;
   background: url(../../assets/img/wave.svg);
   border-radius: 1rem;
-  background-size: 1200px;
-  width: 100%;
-  animation: wave 4s linear infinite;
-  fill: blue;
+  background-size: 1200px 421px;
+  //width: 100%;
+  //height: 100%;
+  animation: wave 10s linear infinite;
+
   @media only screen and (max-width: 768px) {
     background-image: none;
   }
@@ -93,14 +93,11 @@
   }
 }
 
-.pre-title {
-  padding: 1rem 0;
-}
-
 .title {
+  
   color: var(--text-color);
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .sub-title {
@@ -110,7 +107,9 @@
 }
 
 .description {
+  font-size: 1.2rem;
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   line-height: 1.8rem;
 }

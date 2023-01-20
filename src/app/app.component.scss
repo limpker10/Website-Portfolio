@@ -2,12 +2,12 @@
   height: 100vh;
   padding: .6rem 0 .6rem; 
   margin: auto ;
-
 }
 .container-xl {
-  max-width: 1420px;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
+  box-shadow: var(--box2-shadow);
 }
 .sidenav-collapsed{
   @media only screen and (max-width: 768px) {
